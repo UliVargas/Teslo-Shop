@@ -2,7 +2,7 @@
 Para correr localmente, se necesita la base de datos
 
 ```
-docker-compose up -d
+docker compose up -d o docker-compose up -d
 ```
 
 * El -d, significa __detached__
@@ -20,4 +20,3 @@ MONGO_URL = mongo://localhost:27017/teslodb
 ```
 http://localhost:3000/api/seed
 ```
-# Teslo-Shop
