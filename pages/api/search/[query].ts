@@ -19,22 +19,19 @@ export default async function handler (req: NextApiRequest, res: NextApiResponse
 }
 
 const search = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
-  const { query = '' } = req.query
+  let { query = '' } = req.query
 
   if (query.length === 0) {
     return res.status(400).json({ message: 'Debe de especificar el query de busqueda' })
   }
 
-  query.toString().toLowerCase()
+  query = query.toString().toLowerCase()
 
   await db.connect()
 
-  const products = await Product
-    .find({
-      $text: { $search: query }
-    })
-    .select('title images price inStock slug -_id')
-    .lean()
+  const products = await Product.find({
+    $text: { $search: query }
+  }).select('title images price inStock slug -_id').lean()
 
   await db.disconnect()
 

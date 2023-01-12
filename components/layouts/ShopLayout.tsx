@@ -1,6 +1,6 @@
-import Head from "next/head"
-import { ReactNode } from "react"
-import { Navbar, SideMenu } from "../ui"
+import Head from 'next/head'
+import { ReactNode } from 'react'
+import { Navbar, SideMenu } from '../ui'
 
 interface Props {
   title: string

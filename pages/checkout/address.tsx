@@ -1,5 +1,5 @@
 import { ShopLayout } from '../../components/layouts'
-import { Box, Button, FormControl, Grid, InputLabel, MenuItem, Select, TextField, Typography } from '@mui/material'
+import { Box, Button, FormControl, Grid, MenuItem, Select, TextField, Typography } from '@mui/material'
 
 const AddressPage = () => {
   return (
