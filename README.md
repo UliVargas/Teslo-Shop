@@ -9,7 +9,7 @@ docker compose up -d o docker-compose up -d
 
 * MongoDB URL Local:
 ```
-MONGO_URL = mongo://localhost:27017/teslodb
+MONGO_URL = mongodb://localhost:27017/teslodb
 ```
 
 ## Configurar las variables de entorno
