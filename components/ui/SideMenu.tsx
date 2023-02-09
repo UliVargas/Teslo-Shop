@@ -29,10 +29,9 @@ import { UIContext } from '../../context'
 import { useRouter } from 'next/router'
 
 export const SideMenu = () => {
+  const { push } = useRouter()
   const { isMenuOpen, toggleSideMenu } = useContext(UIContext)
   const [searchTerm, setSearchTerm] = useState('')
-
-  const { push } = useRouter()
 
   const onSearchTerm = () => {
     if (searchTerm.trim().length === 0) return
@@ -58,6 +57,8 @@ export const SideMenu = () => {
         <List>
           <ListItem>
             <Input
+              sx={{ display: { xs: 'flex', sm: 'none' } }}
+              autoFocus
               type='text'
               placeholder="Buscar..."
               value={searchTerm}
